@@ -1,0 +1,152 @@
+
+@keyframes burger-button {
+  from {
+    transform: rotate(0deg);
+  }
+  20% {
+    right: 110px;
+  }
+  to {
+  right: 300px;
+  transform: rotate(45deg);
+  }
+}
+
+@keyframes initial-burger-button {
+  from {
+    right: 300px;
+    transform: rotate(45deg);
+  }
+  to {
+    right: 110px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes burger-button-before {
+  from {
+    top: 10px;
+    right: 0px;
+    transform: rotate(0deg);
+    opacity: 1.0;
+  }
+  to {
+    top: -30px;
+    right: -30px;
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes initial-burger-button-before {
+  from {
+     top: -30px; 
+    right: -30px;
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  to {
+     top: 10px; 
+    right: 0px;
+    transform: rotate(0deg);
+    opacity: 1.0;
+  }
+}
+
+@keyframes burger-button-after {
+  from {
+      top: 20px;
+      transform: rotate(0deg);
+  }
+  to {
+    top: 0px;
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes initial-burger-button-after {
+  from {
+      top: 0px;
+      transform: rotate(-90deg);
+  }
+  to {
+    top: 20px;
+    transform: rotate(0deg);
+  }
+}
+
+.animation-burger__button {
+  animation: burger-button 1s forwards;
+}
+
+.animation-initial-burger__button {
+  animation: initial-burger-button 1s forwards;
+}
+
+.animation-burger__button::before {
+  animation: burger-button-before 0.5s forwards;
+}
+
+.animation-initial-burger__button::before {
+  animation: initial-burger-button-before 1s forwards;
+}
+
+.animation-burger__button::after {
+  animation: burger-button-after 1s forwards;
+}
+
+.animation-initial-burger__button::after {
+  animation: initial-burger-button-after 1s forwards;
+}
+
+@media(max-width: 576px) {
+  @keyframes burger-button {
+    from {
+      transform: rotate(0deg);
+    }
+    20% {
+      right: 50px;
+    }
+    to {
+    right: 310px;
+    transform: rotate(45deg);
+    }
+  }
+  
+  @keyframes initial-burger-button {
+    from {
+      right: 310px;
+      transform: rotate(45deg);
+    }
+    to {
+      right: 50px;
+      transform: rotate(0deg);
+    }
+  }
+} 
+
+@media(max-width: 576px) {
+  @keyframes burger-button {
+    from {
+      transform: rotate(0deg);
+    }
+    20% {
+      right: 50px;
+    }
+    to {
+    right: 240px;
+    transform: rotate(45deg);
+    }
+  }
+  
+  @keyframes initial-burger-button {
+    from {
+      right: 240px;
+      transform: rotate(45deg);
+    }
+    to {
+      right: 50px;
+      transform: rotate(0deg);
+    }
+  }
+}
